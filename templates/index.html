@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenShift Python + DB</title>
+</head>
+<body>
+    <h1>🚀 Demo OpenShift + PostgreSQL</h1>
+
+    <form action="/add" method="post">
+        <input type="text" name="text" placeholder="Escribe un mensaje">
+        <button type="submit">Guardar</button>
+    </form>
+
+    <h2>📌 Mensajes</h2>
+
+    <ul>
+        {% for m in messages %}
+            <li>{{ m.id }} - {{ m.text }}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+    <a href="/api/messages">Ver API JSON</a>
+</body>
+</html>
